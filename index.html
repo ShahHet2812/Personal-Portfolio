@@ -329,21 +329,21 @@
             if (document.body.classList.contains('light-mode')) {
                 document.body.classList.remove('light-mode');
                 table.classList.add('table-dark')
+                localStorage.setItem('theme', 'dark'); // Store the theme in localStorage
+                toggleButton.textContent = 'Light Mode'; 
                 for (let i in social) {
                     social[i].classList.add('social-link-dark')
                     social[i].classList.remove('social-link-light')
                 }
-                localStorage.setItem('theme', 'dark'); // Store the theme in localStorage
-                toggleButton.textContent = 'Light Mode'; // Update button text
             } else {
                 document.body.classList.add('light-mode');
                 table.classList.remove('table-dark');
+                localStorage.setItem('theme', 'light'); // Store the theme in localStorage
+                toggleButton.textContent = 'Dark Mode'; // Update button text
                 for (let i in social) {
                     social[i].classList.add('social-link-light')
                     social[i].classList.remove('social-link-dark')
                 }
-                localStorage.setItem('theme', 'light'); // Store the theme in localStorage
-                toggleButton.textContent = 'Dark Mode'; // Update button text
             }
         });
     </script>
