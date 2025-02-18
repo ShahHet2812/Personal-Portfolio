@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Het-Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/b9bab6dbdd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Het's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certificates">Certificates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="nav-link">Light Mode</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section id="home" class="hero-section" style="height: 100vh;">
+            <video autoplay muted loop class="object-fit-cover">
+                <source src="media/background.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="container d-flex">
+                <div class="col-12 text-center hero-content">
+                    <h1 class="display-1">Hi! I am Het Shah and i am a passionate</h1>
+                    <span id="element"></span>
+                </div>
+            </div>
+            </div>
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.14"></script>
+            <script>
+                var typed = new Typed('#element', {
+                    strings: ['<i>Web Developer</i>', '<i>Video Editor</i>', '<i>Web Designer</i>', '<i>Chess Player</i>'],
+                    typeSpeed: 60,
+                    backSpeed: 30,  // Adjust the backspacing speed for better effect
+                    backDelay: 1000, // Delay before starting to backspace
+                    loop: true, // Infinite loop of typing
+                    cursorChar: '|', // Customize the cursor character
+                    showCursor: true, // Make sure the cursor is visible
+                });
+
+                // Optional: Increase cursor size through CSS
+                document.styleSheets[0].insertRule('#element .typed-cursor { font-size: 50px; }', 0);
+            </script>
+
+            </script>
+        </section>
+        <hr>
+        <section id="about" class="py-5" style="height: 100vh;">
+            <div class="container col-12">
+                <h2 class="text-center mb-5">About Me</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="profile-image-container">
+                            <img src="media/developer.jpg" alt="Het Shah" class="profile-image">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>Who am I?</h3>
+                        <p>I'm Het Shah, a passionate full-stack developer with expertise in modern web technologies. I
+                            love creating
+                            elegant solutions to complex problems.</p>
+                        <div class="skills mt-4">
+                            <h4>Skills</h4>
+                            <div class="skill-tags">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                                <span class="badge">JavaScript</span>
+                                <span class="badge">Java</span>
+                                <span class="badge">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="projects" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">My Projects</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card card-1 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Personal Health Tracker</h5>
+                                <p class="card-text">A Java Based Application to track the Health,Book
+                                    Appointments,Calculate BMI and Maintain Patient Record</p>
+                                <a href="project1.html" class="btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-2 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Groww Like App</h5>
+                                <p class="card-text">A simple Python project that allows users to monitor, trade, and
+                                    manage stocks with live price updates using real-time market data.</p>
+                                <a href="project2.html" class="btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card card-3 h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">SpaceX Website</h5>
+                                <p class="card-text">Interactive SpaceX Website which shows the images and decription of
+                                    projects of SpaceX company.</p>
+                                <a href="project3.html" class="btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="certificates" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Certificates</h2>
+                <table id="table" class="table table-striped table-dark table-bordered">
+                    <tr>
+                        <th>Sr.No</th>
+                        <th>Title</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Certificate of Participation in Dev-o-lution</td>
+                        <td><a
+                                href="https://unstop.com/certificate-preview/719948c1-1280-446d-89c8-2340fa3d007f?utm_campaign=site-emails">Link</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Introduction to HTML, CSS, & JavaScript</td>
+                        <td><a href="https://www.coursera.org/account/accomplishments/records/2LRCYY61EZW1">Link</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Supervised Machine Learning: Regression and Classification </td>
+                        <td><a
+                                href="https://www.coursera.org/account/accomplishments/verify/X479DIONQBUS?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse">Link</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Inheritance and Data Structures in Java</td>
+                        <td><a href="https://coursera.org/verif y/F42W92QD2LU8">Link</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Foundations of Cybersecurity </td>
+                        <td><a
+                                href="https://www.coursera.org/account/accomplishments/verify/JXKZDDUTSD6J?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse">Link</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Introduction to Java</td>
+                        <td><a
+                                href="https://www.coursera.org/account/accomplishments/verify/HMEDFWJVZU5M?utm_source%3Dandroid%26utm_medium%3Dcertificate%26utm_content%3Dcert_image%26utm_campaign%3Dsharing_cta%26utm_product%3Dcourse">Link</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+        <hr>
+        <section id="testimonials" class="py-5" style="height: 100vh;">
+            <div class="container-fluid">
+                <h2 class="text-center mb-5">Testimonials</h2>
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="media/vaibhav.jpeg" class="mx-auto d-block rounded-circle">
+                            <div class="testimonial text-center">
+                                <p class="blockquote" style=" color: rgb(170, 107, 228);">"Had the pleasure of mentoring
+                                    Het, a second-semester student, during their visit to the Google Hyderabad office. I
+                                    was impressed by their curiosity and determination to understand the real-world
+                                    applications of what they’re learning. Het's enthusiasm for tech was evident in
+                                    every conversation, and it's clear they’re on the right path. It’s always refreshing
+                                    to see such passion in students so early in their careers!"</p>
+                                <h5 class="blockquote-footer">Vaibhav Shrimali(Senior Software
+                                    Engineer,Google,Hyderabad)</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="media/abhishek.jpeg" class="mx-auto d-block rounded-circle">
+                            <div class="testimonial text-center">
+                                <p class="blockquote" style=" color: rgb(170, 107, 228);">"I had the pleasure of meeting
+                                    Het Shah, a passionate second-semester student, during his visit to our Hyderabad
+                                    office. His curiosity, eagerness to learn, and insightful questions about software
+                                    development were truly impressive. It’s clear he has a bright future ahead in tech,
+                                    and I look forward to seeing his growth."</p>
+                                <h5 class="blockquote-footer">Abhishek Upadhyaya(Delivery Manager,Microsoft,Hyderabad)
+                                </h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="media/aayush.jpg" class="mx-auto d-block rounded-circle">
+                            <div class="testimonial text-center">
+                                <p class="blockquote" style=" color: rgb(170, 107, 228);">"Your invaluable co-operation
+                                    in the highly significant project presented by our university was very much
+                                    appreciated. Your intellectual capabilities were of great help in completion of the
+                                    project.Your quick responses during the presentation certainly solidified a
+                                    respectable score which helped us with end term results"</p>
+                                <h5 class="blockquote-footer">Aayush Pandya</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="media/Yashesh.png" class="mx-auto d-block rounded-circle">
+                            <div class="testimonial text-center">
+                                <p class="blockquote" style=" color: rgb(170, 107, 228);">"Working with Het on our
+                                    college project was a great experience for me. He was not only a good team-mate, but
+                                    also a good supporter. With his quick intellect and problem solving skills, he
+                                    always found out a way in any kind of problems. He is a quick learner and is always
+                                    motivates others to do the best out of them. He also has good analytical thinking
+                                    which helped us a lot in the project. I'm grateful that I've got a chance to work
+                                    with him."</p>
+                                <h5 class="blockquote-footer">Yashesh Mehta</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Let's Connect</h2>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <div class="social-links">
+                            <a href="https://github.com/ShahHet2812" target="_blank" class="social social-link-dark">
+                                <i class="fa-brands fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://x.com/SHAHHet94920284" target="_blank" class="social social-link-dark">
+                                <i class="fa-brands fa-x-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://www.instagram.com/het._.shah._/" target="_blank"
+                                class="social social-link-dark">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/het-shah-7264472b3/" target="_blank"
+                                class="social social-link-dark">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                        <p class="mt-4 contact-text">Feel free to reach out through any of these platforms!</p>
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">© 2025 Het Shah. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        const table = document.getElementById('table');
+        const social = document.querySelectorAll('.social')
+        if (currentTheme === 'light') {
+            document.body.classList.add('light-mode');
+            toggleButton.textContent = 'Dark Mode'; // Update button text
+        } else {
+            document.body.classList.remove('light-mode');
+            toggleButton.textContent = 'Light Mode'; // Update button text
+        }
+
+        // Event listener for toggle button click
+        toggleButton.addEventListener('click', () => {
+            // Toggle between dark and light mode
+            if (document.body.classList.contains('light-mode')) {
+                document.body.classList.remove('light-mode');
+                table.classList.add('table-dark')
+                for (let i in social) {
+                    social[i].classList.add('social-link-dark')
+                    social[i].classList.remove('social-link-light')
+                }
+                localStorage.setItem('theme', 'dark'); // Store the theme in localStorage
+                toggleButton.textContent = 'Light Mode'; // Update button text
+            } else {
+                document.body.classList.add('light-mode');
+                table.classList.remove('table-dark');
+                for (let i in social) {
+                    social[i].classList.add('social-link-light')
+                    social[i].classList.remove('social-link-dark')
+                }
+                localStorage.setItem('theme', 'light'); // Store the theme in localStorage
+                toggleButton.textContent = 'Dark Mode'; // Update button text
+            }
+        });
+    </script>
+</body>
+
+</html>
