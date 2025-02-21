@@ -19,10 +19,12 @@ main hr {
     margin: 40px 84px;
 }
 
-img {
+.profile-image {
     border-radius: 15px;
-    width: 350px;
-    margin-left: 110px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 20px;
+    display: block;
 }
 
 .navbar {
@@ -36,12 +38,23 @@ img {
     color: rgb(170, 107, 228);
 }
 
+.nav-link {
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: rgb(170, 107, 228);
+}
+
 .hero-section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     color: white;
     overflow: hidden;
     display: flex;
+    align-items: center;
+    padding: 20px;
 }
 
 .hero-section video {
@@ -57,52 +70,28 @@ img {
 .hero-content {
     position: relative;
     z-index: 2;
-    margin-top: 250px;
+    width: 100%;
+    padding: 20px;
 }
 
 
 .hero-section h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
     margin-bottom: 1rem;
     color: white;
 }
 
 #element {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
     color: rgb(255, 255, 255);
 }
-
-.left {
-    font-size: 1.5rem;
-}
-
-.firstSection {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 80px 0;
-}
-
-.firstSection>div {
-    width: 30%;
-}
-
-.leftSection {
-    font-size: 3rem;
-    margin: 70px 0;
-}
-
-.rightSection img {
-    width: 80%;
-    margin: 35px 0;
-}
-
 .badge {
     background-color: rgb(170, 107, 228);
-    margin: 15px;
-    width: 83px;
-    height: 23px;
-    font-size: 13px;
+    margin: 5px;
+    padding: 8px 16px;
+    font-size: 0.8rem;
+    border-radius: 20px;
+    white-space: nowrap;
 }
 
 .badge:hover {
@@ -111,110 +100,12 @@ img {
     color: #fff;
     box-shadow: 0 8px 30px rgb(170, 107, 228);
 }
-
-.purple {
-    color: rgb(170, 107, 228);
-}
-
-.secondSection {
-    max-width: 80vw;
-    margin: auto;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.social-link-dark {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #e0e0e0;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    padding: 1.5rem;
-    border-radius: 10px;
-    background: #1e1e1e;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    min-width: 120px;
-}
-
-.social-link-dark i,
-.social-link-light i {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: rgb(170, 107, 228);
-}
-
-.social-link-dark span,
-.social-link-light span {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
-.social-link-dark:hover {
-    transform: translateY(-5px);
-    background: #2d2d2d;
-    color: white;
-    box-shadow: 0 8px 30px rgb(170, 107, 228);
-}
-
-.social-link-light {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #1e1e1e;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    padding: 1.5rem;
-    border-radius: 10px;
-    background: #e0e0e0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    min-width: 120px;
-}
-
-.social-link-light:hover {
-    transform: translateY(-5px);
-    background: white;
-    color: #2d2d2d;
-    box-shadow: 0 8px 30px rgb(170, 107, 228);
-}
-
-.contact-text {
-    color: #888;
-    font-size: 1.1rem;
-    margin-top: 2rem;
-}
-
-.testimonial {
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: auto;
-}
-
-#testimonialCarousel {
-    width: 100%;
-}
-
-.carousel-inner {
-    width: 100%;
-}
-
-.carousel-item {
-    transition: transform 1s ease-in-out;
-}
-
 .card {
+    height: 100%;
     background: #1e1e1e;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
+    transition: all 0.4s ease;
+    margin-bottom: 20px;
 }
 
 .card::before {
@@ -267,17 +158,89 @@ img {
 .btn {
     background-color: rgb(170, 107, 228);
 }
-
-.project-image {
-    width: 80%;
-    border-radius: 15px;
-}
-
 .btn:hover {
     background-color: rgb(170, 107, 228);
     color: white;
 }
+.table {
+    margin-top: 20px;
+    background: #1e1e1e;
+    color: #e0e0e0;
+}
 
+.table th {
+    background-color: rgb(170, 107, 228);
+    color: white;
+}
+
+.table td a {
+    color: rgb(170, 107, 228);
+    text-decoration: none;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 0 10px;
+}
+
+.social-link-dark, .social-link-light {
+    flex: 1;
+    min-width: 120px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link-dark {
+    background: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-link-light {
+    background: #e0e0e0;
+    color: #1e1e1e;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.social-link-dark i,
+.social-link-light i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: rgb(170, 107, 228);
+}
+
+.social-link-dark:hover,
+.social-link-light:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgb(170, 107, 228);
+}
+.testimonial {
+    padding: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin:auto;
+    max-width: 800px;
+}
+.carousel-item {
+    transition: transform 1s ease-in-out;
+}
+.carousel-item img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    object-fit: cover;
+}
 .carousel-item>img {
     width: 200px;
     margin-bottom: 5px;
@@ -289,5 +252,102 @@ img {
 
 body.light-mode {
     background-color: #f4f4f4;
-    color: black;
+    color: #333;
+}
+
+body.light-mode .card {
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .card-text {
+    color: #333;
+}
+
+body.light-mode .testimonial {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .navbar {
+    background: rgba(255, 255, 255, 0.95) !important;
+}
+
+body.light-mode .nav-link {
+    color: #333 !important;
+}
+
+body.light-mode .nav-link:hover {
+    color: rgb(170, 107, 228) !important;
+}
+.project-image {
+    width: 80%;
+    border-radius: 15px;
+}
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    #element {
+        font-size: 1.5rem;
+    }
+
+    .social-links {
+        gap: 0.5rem;
+    }
+
+    .social-link-dark,
+    .social-link-light {
+        padding: 0.8rem;
+        min-width: 100px;
+    }
+
+    .testimonial {
+        padding: 15px;
+    }
+
+    .blockquote {
+        font-size: 0.9rem;
+    }
+
+    .table {
+        font-size: 0.8rem;
+    }
+
+    .profile-image {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        padding: 10px;
+    }
+
+    .hero-content {
+        padding: 10px;
+    }
+
+    .badge {
+        padding: 6px 12px;
+        font-size: 0.7rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+    .social-link-dark i,
+    .social-link-light i {
+        font-size: 1.5rem;
+    }
+
+    .social-link-dark span,
+    .social-link-light span {
+        font-size: 0.8rem;
+    }
 }
